@@ -7,11 +7,11 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Lock = await hre.ethers.getContractFactory("Crowdfunding");
-  const lock = await Lock.deploy();
-  await lock.deployed();
+  const Crowdfunding = await hre.ethers.getContractFactory("Crowdfunding");
+  const crowdfunding = await Crowdfunding.deploy();
+  await crowdfunding.deployed();
 
-  console.log(`__> ${lock.address}`);
+  console.log(`--> ${crowdfunding.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
